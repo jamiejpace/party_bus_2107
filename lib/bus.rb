@@ -8,17 +8,17 @@ class Bus
   end
 
   def add_passenger(passenger_name)
-    @passengers << passenger_name
+    passengers << passenger_name
   end
 
   def yell_at_passengers
-    @passengers.map do |name|
+    passengers.map do |name|
       name.upcase
     end
   end
 
   def number_of_passengers
-    @passengers.length
+    passengers.length
   end
 
   def over_capacity?
