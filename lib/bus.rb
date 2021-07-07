@@ -16,4 +16,16 @@ class Bus
       name.upcase
     end
   end
+
+  def number_of_passengers
+    @passengers.length
+  end
+
+  def over_capacity?
+    if number_of_passengers > 4
+      true
+    else
+      false
+    end
+  end
 end
