@@ -81,7 +81,15 @@ describe Bus do
       bus.add_passenger('Cat')
       bus.add_passenger('Alice')
       bus.kick_out
+
       expect(bus.number_of_passengers).to eq(5)
+
+      bus.kick_out
+      bus.kick_out
+
+      expect(bus.number_of_passengers).to eq(3)
+      expect(bus.over_capacity?).to be false
+      expect(bus.passengers).to eq(["James", "Cat", "Alice"])
     end
   end
 end

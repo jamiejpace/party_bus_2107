@@ -30,8 +30,6 @@ class Bus
   end
 
   def kick_out
-    if over_capacity? == true
       passengers.shift
     end
-  end
 end
